@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* La barra social */
+
+.social {
+    position: fixed;
+    /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+    right: 0;
+    /* Establecemos la barra en la derecha */
+    top: 30%;
+    /* Bajamos la barra 200px de arriba a abajo */
+    z-index: 2000;
+    /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+.social ul {
+    list-style: none;
+}
+
+.social ul li a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    /* Establecemos una transición a todas las propiedades */
+}
+
+.social ul li .icon-whatsapp {
+    background: #00bb2d;
+}
+
+
+/* Establecemos los colores de cada red social, aprovechando su class */
+
+.social ul li .icon-instagram {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social ul li a:hover {
+    padding: 10px 30px;
+    /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+}
+
+
+/* el navbar */
+
+.nav-link {
+    text-decoration: none;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.banner {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 60%;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+/* imagen del centro */
+
+.torta {
+    width: 100%;
+    height: 400px;
+    background-image: url("https://pikulandia.000webhostapp.com/imagenes/Tortas/3.jpeg");
+    background-size: 100% 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* los botones */
+
+.middle {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    position: relative;
+    display: block;
+    color: white;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid rgb(6, 171, 237);
+    padding: 14px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+}
+
+.btn::before {
+    background: rgb(6, 171, 237);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+
+.btn1::before {
+    width: 100%;
+    height: 0%;
+}
+
+.btn1:hover::before {
+    height: 100%;
+}
